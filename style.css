@@ -1,0 +1,201 @@
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, #0a0a1f, #000000, #000000);
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.navigation {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navigation a {
+    color: rgb(179, 98, 255);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+
+.media-icons {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.media-icons a {
+    color: #326f77;
+    font-size: 25px;
+    transition: transform 0.3s;
+}
+
+.media-icons a:hover {
+    transform: scale(1.5);
+}
+
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(64, 206, 216, 0.8),
+                 0 0 20px rgb(69, 145, 155),
+                 0 0 30px rgb(50, 121, 143);
+}
+.button-neon { 
+    position: relative;
+    display: inline-block;
+    padding: 15px 20px;
+    margin: 40px auto 0 auto;
+    color: #0aa8e6;
+    font-family: 'open_sansbold';
+    text-decoration: none;
+    transition: 0.4s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    border: 2px solid #164a5f;
+    border-radius: 50px;
+}
+  .button-neon:hover{
+    background: #0aa8e6;
+    color: #000;
+    box-shadow: 0 0 10px #164a5f, 0 0 40px #164a5f, 0 0 70px #0aa8e6;
+  }
+  .button-neon:active{
+     color:#0aa8e6; 
+     background: #000000;
+  }
+
+.subtitle, .project {
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    color: rgb(43, 130, 201);
+    text-shadow: 0 0 5px rgb(65, 157, 211);
+}
+
+.background-effects {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(85, 0, 255, 0.4), transparent 60%),
+                radial-gradient(circle at 50% 50%, rgb(67, 130, 255), transparent 40%);
+    mix-blend-mode: overlay;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle, .project {
+        font-size: 0.9rem;
+    }
+
+    .navigation {
+        top: 10px;
+        gap: 10px;
+    }
+
+    .navigation a {
+        font-size: 0.9rem;
+    }
+
+    .background-effects {
+        background: radial-gradient(circle at 50% 50%, rgba(85, 0, 255, 0.3), transparent 50%),
+                    radial-gradient(circle at 50% 50%, rgb(67, 130, 255), transparent 30%);
+    }
+}
+.mouse-trail {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: rgba(0, 123, 255, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.7), 0 0 20px rgba(0, 123, 255, 0.5);
+    animation: trailAnimation 0.5s ease-out forwards;
+  }
+
+
+  @keyframes trailAnimation {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(2);
+    }
+  }
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle, .project {
+        font-size: 0.8rem;
+    }
+
+    .navigation {
+        flex-direction: column;
+        top: 15px;
+        gap: 5px;
+    }
+
+    .navigation a {
+        font-size: 0.8rem;
+    }
+
+    .media-icons {
+        bottom: 10px;
+        gap: 15px;
+    }
+
+    .media-icons a {
+        font-size: 20px;
+    }
+}

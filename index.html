@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacific Word</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="2.png">
+  </head>
+<body>
+  <div class="navigation">
+    <a href="#">Início</a>
+    <a href="#">Sobre</a>
+    <a href="#">Serviço</a>
+    <a href="./faleconosco/index.html">Fale conosco</a>
+</div>
+
+<div class="media-icons">
+    <a href=""><i class="fab fa-facebook-f"></i></a>
+    <a href=""><i class="fab fa-whatsapp"></i></a>
+    <a href=""><i class="fab fa-instagram"></i></a>
+   </div> 
+
+
+    <div class="container">
+        <div class="subtitle">Studio Word</div>
+        <div class="title">Pacific Word</div>
+        <div class="project">Nosso Objetivo é facilitar o acesso à tecnologia e melhorar a saúde das pessoas. </div>
+        <div class="background-effects"></div>
+    </div>
+    <a href="./pacific Bot/index.html" class="button-neon">Pacific Bot </a>
+    <script>
+        document.addEventListener('mousemove', (e) => {
+          const trail = document.createElement('div');
+          trail.classList.add('mouse-trail');
+          trail.style.left = `${e.pageX}px`;
+          trail.style.top = `${e.pageY}px`;
+          document.body.appendChild(trail);
+      
+          setTimeout(() => {
+            trail.remove();
+          }, 500);
+        });
+      </script>
+      
+</body>
+</html>
